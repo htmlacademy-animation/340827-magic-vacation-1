@@ -99,3 +99,8 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.lead-title {
+  animation: fadeIn 0.5s;
+  animation-timing-function: ease-in-out;
+}

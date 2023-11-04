@@ -241,16 +241,20 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
+    transition-duration: 1s;
+    transition-property: color;
 
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      width: 100%;
+      width: 0;
       height: 2px;
       background-color: $c-light;
-      display: none;
-      left: 0;
+      opacity: 0;
+      right: 0;
+      transition-duration: 1s;
+      transition-timing-function: ease;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -267,7 +271,8 @@
 
     &.active {
       &::after {
-        display: block;
+        opacity: 1;
+        width: 100%;
       }
     }
 
@@ -277,8 +282,11 @@
       outline: none;
 
       &::after {
-        opacity: 1;
+        width: 100%;
+        right: unset;
+        left: 0;
         background-color: $c-purple;
+        opacity: 1;
       }
     }
   }
