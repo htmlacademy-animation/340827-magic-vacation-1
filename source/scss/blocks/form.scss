@@ -2,6 +2,8 @@
   position: relative;
   display: flex;
   align-items: center;
+  animation: fadeIn 0.5s;
+  animation-timing-function: ease-in-out;
 }
 
 .form__label {
